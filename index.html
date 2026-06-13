@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inam Ul Hassan | Food Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p>Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>IH<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#awards" class="nav-link">Awards</a></li>
+                <li><a href="#volunteering" class="nav-link">Volunteering</a></li>
+                <li><a href="#conferences" class="nav-link">Conferences</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#education" class="mobile-nav-link">Education</a></li>
+            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#awards" class="mobile-nav-link">Awards</a></li>
+            <li><a href="#volunteering" class="mobile-nav-link">Volunteering</a></li>
+            <li><a href="#conferences" class="mobile-nav-link">Conferences</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <i class="fas fa-flask"></i>
+                    <span>Food Science Professional</span>
+                </div>
+                <h1 class="hero-title animate-on-scroll">
+                    Hi, I'm <span class="highlight">Inam Ul Hassan</span>
+                </h1>
+                <div class="hero-subtitle-wrapper animate-on-scroll">
+                    <span class="hero-subtitle-static">I'm passionate about </span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description animate-on-scroll">
+                    BS Food Science &amp; Technology graduate with a perfect 4.00 CGPA,
+                    Global UGRAD Scholar, and Gold Medalist dedicated to advancing
+                    food safety, quality, and innovation.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>Explore More</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="4.00">0</span>
+                        <span class="stat-label">CGPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Awards</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image animate-on-scroll">
+                <div class="image-wrapper">
+                    <div class="image-border"></div>
+                    <div class="image-container">
+                        <!-- Replace 'profile.jpg' with your actual image -->
+                        <img src="profile.jpg" alt="Inam Ul Hassan" id="profileImg">
+                    </div>
+                    <div class="floating-badge badge-1">
+                        <i class="fas fa-medal"></i>
+                        <span>Gold Medalist</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>UGRAD Scholar</span>
+                    </div>
+                    <div class="floating-badge badge-3">
+                        <i class="fas fa-award"></i>
+                        <span>4.0 CGPA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-user"></i> Introduction</span>
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p class="about-lead">
+                        I am a graduate of <strong>BS Food Science and Technology</strong> from the
+                        University of Central Punjab, Lahore, with a perfect <strong>4.00/4.00 CGPA</strong>.
+                        My academic journey has been fueled by a deep interest in understanding the science
+                        behind food — from its chemistry and processing to its safety and quality.
+                    </p>
+                    <p>
+                        As a <strong>Global UGRAD Scholar</strong> at Kansas State University, I gained
+                        invaluable international exposure in leadership, cultural exchange, and community
+                        service. I am now eager to pursue a <strong>research master's in Food Science</strong>,
+                        focusing on Food Safety and Quality, Ingredient Functionality, and Food Processing.
+                    </p>
+                    <div class="about-interests">
+                        <h3>Research Interests</h3>
+                        <div class="interest-tags">
+                            <span class="interest-tag"><i class="fas fa-shield-alt"></i> Food Safety & Quality</span>
+                            <span class="interest-tag"><i class="fas fa-atom"></i> Ingredient Functionality</span>
+                            <span class="interest-tag"><i class="fas fa-industry"></i> Food Processing</span>
+                            <span class="interest-tag"><i class="fas fa-flask"></i> Food Chemistry</span>
+                            <span class="interest-tag"><i class="fas fa-apple-alt"></i> Human Nutrition</span>
+                            <span class="interest-tag"><i class="fas fa-box"></i> Food Packaging</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-details animate-on-scroll">
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="detail-info">
+                            <h4>Degree</h4>
+                            <p>BS Food Science & Technology</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-university"></i></div>
+                        <div class="detail-info">
+                            <h4>University</h4>
+                            <p>University of Central Punjab</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-star"></i></div>
+                        <div class="detail-info">
+                            <h4>CGPA</h4>
+                            <p>4.00 / 4.00</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="detail-info">
+                            <h4>Location</h4>
+                            <p>Lahore, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-globe"></i></div>
+                        <div class="detail-info">
+                            <h4>Exchange</h4>
+                            <p>Kansas State University, USA</p>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <div class="detail-icon"><i class="fas fa-briefcase"></i></div>
+                        <div class="detail-info">
+                            <h4>Current Role</h4>
+                            <p>Food Safety Officer</p>
+                        </div>
+                    </div>
+                    <div class="about-coursework">
+                        <h3><i class="fas fa-book"></i> Key Coursework</h3>
+                        <ul>
+                            <li>Food Chemistry</li>
+                            <li>Principles of Human Nutrition</li>
+                            <li>Food Processing and Preservation</li>
+                            <li>Food Laws and Regulations</li>
+                            <li>Research Methodology and Skills</li>
+                            <li>Food Packaging</li>
+                            <li>Food Safety and Quality Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Networks & Memberships -->
+            <div class="memberships animate-on-scroll">
+                <h3 class="memberships-title"><i class="fas fa-network-wired"></i> Networks & Memberships</h3>
+                <div class="membership-cards">
+                    <div class="membership-card">
+                        <i class="fas fa-handshake"></i>
+                        <span>Pakistan US Alumni Network (PUAN)</span>
+                    </div>
+                    <div class="membership-card">
+                        <i class="fas fa-users"></i>
+                        <span>Young South Asian Leaders Initiative (YSALI)</span>
+                    </div>
+                    <div class="membership-card">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>International Exchange Alumni (US Dept. of State)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academic Background</span>
+                <h2 class="section-title">My <span class="highlight">Education</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date"><i class="far fa-calendar-alt"></i> 03/2021 – 02/2025</span>
+                            <span class="timeline-badge">CGPA: 4.00/4.00</span>
+                        </div>
+                        <h3>Bachelor of Science in Food Science and Technology</h3>
+                        <h4><i class="fas fa-map-marker-alt"></i> University of Central Punjab, Lahore</h4>
+                        <p class="timeline-thesis">
+                            <strong>Thesis:</strong> Comparative nutritional assessment of Desi and Kabuli
+                            chickpeas and their utilization in the development of energy dense Chickpea Truffles.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Food Chemistry</span>
+                            <span>Human Nutrition</span>
+                            <span>Food Processing</span>
+                            <span>Food Laws</span>
+                            <span>Research Methodology</span>
+                            <span>Food Packaging</span>
+                            <span>Food Safety & Quality</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date"><i class="far fa-calendar-alt"></i> 08/2023 – 12/2023</span>
+                            <span class="timeline-badge badge-gold">Fully Funded</span>
+                        </div>
+                        <h3>Global UGRAD Exchange Program Scholar</h3>
+                        <h4><i class="fas fa-map-marker-alt"></i> Kansas State University, Manhattan, KS, USA</h4>
+                        <p>
+                            Selected as a Global Undergraduate Exchange Program scholar, funded by
+                            IREX and the U.S. Department of State.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Leadership</span>
+                            <span>Cultural Exchange</span>
+                            <span>Community Service</span>
+                            <span>Communication</span>
+                            <span>Purposeful Travel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date"><i class="far fa-calendar-alt"></i> 09/2024</span>
+                            <span class="timeline-badge">Certification</span>
+                        </div>
+                        <h3>Halal Lead Auditor Training Course</h3>
+                        <h4><i class="fas fa-map-marker-alt"></i> IFANCA / Pakistan Halal Apex Pvt. Ltd., Lahore</h4>
+                        <p>
+                            Completed training in fundamentals of Halal foods and auditing practices.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Halal Foods</span>
+                            <span>Auditing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Professional Journey</span>
+                <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card animate-on-scroll">
+                    <div class="exp-card-accent"></div>
+                    <div class="exp-card-header">
+                        <div class="exp-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-date"><i class="far fa-calendar-alt"></i> 08/2025 – Current</span>
+                            <span class="exp-status status-active"><i class="fas fa-circle"></i> Current</span>
+                        </div>
+                    </div>
+                    <h3>Food Safety Officer</h3>
+                    <h4><i class="fas fa-building"></i> Jalal Sons (Food Production Factory)</h4>
+                    <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+                    <ul class="exp-responsibilities">
+                        <li>Ensuring food safety and quality of products across multiple production lines</li>
+                        <li>Working across diverse production sections including Dairy, Biscuits, Bread, Sweets, Snacks,
+                            and Ice Cream</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>Dairy</span>
+                        <span>Biscuits</span>
+                        <span>Bread</span>
+                        <span>Sweets</span>
+                        <span>Snacks</span>
+                        <span>Ice Cream</span>
+                    </div>
+                </div>
+                <div class="experience-card animate-on-scroll">
+                    <div class="exp-card-accent accent-secondary"></div>
+                    <div class="exp-card-header">
+                        <div class="exp-icon icon-secondary">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="exp-date"><i class="far fa-calendar-alt"></i> 01/2024 – 03/2024</span>
+                            <span class="exp-status status-completed"><i class="fas fa-check-circle"></i>
+                                Completed</span>
+                        </div>
+                    </div>
+                    <h3>Research Intern</h3>
+                    <h4><i class="fas fa-building"></i> PCSIR Laboratories Complex</h4>
+                    <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+                    <ul class="exp-responsibilities">
+                        <li>Worked in Food and Biotechnology Research Center</li>
+                        <li>Learned and performed basic food analysis techniques</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>Food Analysis</span>
+                        <span>Biotechnology</span>
+                        <span>Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-project-diagram"></i> My Work</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Final Year Project</span>
+                        <h3>Chickpea Truffles Development</h3>
+                        <p>
+                            Comparative nutritional assessment of Desi and Kabuli chickpeas
+                            and their utilization in the development of energy dense Chickpea Truffles.
+                            Focused on nutrient profiling, proximate analysis, and product formulation.
+                        </p>
+                        <div class="project-tech">
+                            <span>Nutritional Assessment</span>
+                            <span>Product Development</span>
+                            <span>Proximate Analysis</span>
+                            <span>Food Formulation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image project-image-2">
+                        <div class="project-overlay">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag tag-community">Community Development</span>
+                        <h3>SafeBite Initiative</h3>
+                        <p>
+                            Community development project funded by IREX and the U.S. Department of State,
+                            aimed at promoting food safety and hygiene among local street food vendors
+                            through awareness campaigns and distribution of Personal Protective Equipment (PPEs).
+                        </p>
+                        <div class="project-tech">
+                            <span>IREX Funded</span>
+                            <span>Food Safety</span>
+                            <span>PPE Distribution</span>
+                            <span>Community Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-trophy"></i> Recognition</span>
+                <h2 class="section-title">Honours & <span class="highlight">Awards</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card animate-on-scroll">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="award-content">
+                        <h3>Gold Medalist</h3>
+                        <p class="award-org">University of Central Punjab, Lahore</p>
+                        <p class="award-date"><i class="far fa-calendar-alt"></i> 2021</p>
+                        <p>Awarded Gold Medal for outstanding academic achievement in BS Food Science and Technology.
+                        </p>
+                    </div>
+                    <div class="award-ribbon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="award-card animate-on-scroll">
+                    <div class="award-icon award-icon-blue">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="award-content">
+                        <h3>Global UGRAD Exchange Program Scholar</h3>
+                        <p class="award-org">IREX & U.S. Department of State</p>
+                        <p class="award-date"><i class="far fa-calendar-alt"></i> August 2023</p>
+                        <p>Fully funded scholarship for semester exchange at Kansas State University, USA.</p>
+                    </div>
+                    <div class="award-ribbon ribbon-blue">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="award-card animate-on-scroll">
+                    <div class="award-icon award-icon-green">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="award-content">
+                        <h3>Community Development Initiative Award</h3>
+                        <p class="award-org">IREX & U.S. Department of State</p>
+                        <p class="award-date"><i class="far fa-calendar-alt"></i> October 2024</p>
+                        <p>Awarded for the SafeBite Initiative — promoting food safety among street food vendors.</p>
+                    </div>
+                    <div class="award-ribbon ribbon-green">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="award-card animate-on-scroll">
+                    <div class="award-icon award-icon-purple">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="award-content">
+                        <h3>Merit-Based 100% Tuition Fee Scholarship</h3>
+                        <p class="award-org">University of Central Punjab, Lahore</p>
+                        <p class="award-date"><i class="far fa-calendar-alt"></i> 2021 – 2025</p>
+                        <p>Full tuition fee waiver throughout the undergraduate program based on academic merit.</p>
+                    </div>
+                    <div class="award-ribbon ribbon-purple">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteering Section -->
+    <section id="volunteering" class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-heart"></i> Giving Back</span>
+                <h2 class="section-title">Volunteering <span class="highlight">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="volunteer-grid">
+                <div class="volunteer-card animate-on-scroll">
+                    <div class="vol-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Konza Student's Table</h3>
+                    <h4>Kansas State University, Manhattan, KS</h4>
+                    <span class="vol-date">08/2023 – 12/2023</span>
+                    <ul>
+                        <li>Packaging breakfast and cold meals</li>
+                        <li>Distributing meals to K-State students and families</li>
+                        <li>Supporting food/nutritional insecurity initiatives</li>
+                    </ul>
+                </div>
+                <div class="volunteer-card animate-on-scroll">
+                    <div class="vol-icon vol-icon-2"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Rizq Foundation</h3>
+                    <h4>Lahore, Pakistan</h4>
+                    <span class="vol-date">2022 – 2024</span>
+                    <ul>
+                        <li>Supporting disadvantaged communities</li>
+                        <li>Distribution of nutritional items during Ramadan</li>
+                    </ul>
+                </div>
+                <div class="volunteer-card animate-on-scroll">
+                    <div class="vol-icon vol-icon-3"><i class="fas fa-hands-helping"></i></div>
+                    <h3>HandsOn Kansas State</h3>
+                    <h4>Manhattan, Kansas</h4>
+                    <span class="vol-date">10/2023</span>
+                    <ul>
+                        <li>Civic learning and leadership training</li>
+                        <li>Food distribution service team participation</li>
+                    </ul>
+                </div>
+                <div class="volunteer-card animate-on-scroll">
+                    <div class="vol-icon vol-icon-4"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Transparent Hands</h3>
+                    <h4>Lahore, Pakistan</h4>
+                    <span class="vol-date">04/2025 – 07/2025</span>
+                    <ul>
+                        <li>Participated in six free medical camps</li>
+                        <li>Assisted patient registration</li>
+                        <li>Coordinated medical services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conferences Section -->
+    <section id="conferences" class="section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-microphone-alt"></i> Engagements</span>
+                <h2 class="section-title">Conferences & <span class="highlight">Seminars</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="conferences-grid">
+                <div class="conf-card animate-on-scroll">
+                    <div class="conf-number">01</div>
+                    <div class="conf-content">
+                        <span class="conf-role">Presenter</span>
+                        <h3>World Food Prize Foundation</h3>
+                        <p class="conf-location"><i class="fas fa-map-marker-alt"></i> Des Moines, Iowa, USA</p>
+                        <p class="conf-date"><i class="far fa-calendar-alt"></i> Oct 24 – 26, 2023</p>
+                        <p>Presented KSU's table focusing on Feed the Future Climate Resilient Cereals Innovation Lab
+                            and food & nutritional security.</p>
+                    </div>
+                </div>
+                <div class="conf-card animate-on-scroll">
+                    <div class="conf-number">02</div>
+                    <div class="conf-content">
+                        <span class="conf-role role-achievement">3rd Position</span>
+                        <h3>4th Food Innovation Competition</h3>
+                        <p class="conf-location"><i class="fas fa-map-marker-alt"></i> University of Central Punjab,
+                            Lahore</p>
+                        <p class="conf-date"><i class="far fa-calendar-alt"></i> Jan 28, 2025</p>
+                        <p>Secured 3rd position in the food innovation competition showcasing novel food product
+                            development.</p>
+                    </div>
+                </div>
+                <div class="conf-card animate-on-scroll">
+                    <div class="conf-number">03</div>
+                    <div class="conf-content">
+                        <span class="conf-role role-participant">Participant</span>
+                        <h3>2nd National Conference on Emerging Horizons in Science & Technology</h3>
+                        <p class="conf-location"><i class="fas fa-map-marker-alt"></i> UCP Lahore</p>
+                        <p class="conf-date"><i class="far fa-calendar-alt"></i> Nov 21 – 22, 2024</p>
+                        <p>Participated in discussions on emerging trends and advancements in science and technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="conf-card animate-on-scroll">
+                    <div class="conf-number">04</div>
+                    <div class="conf-content">
+                        <span class="conf-role role-organizer">Organizer</span>
+                        <h3>National Symposium — World Food Safety Day</h3>
+                        <p class="conf-location"><i class="fas fa-map-marker-alt"></i> UCP Lahore</p>
+                        <p class="conf-date"><i class="far fa-calendar-alt"></i> Jun 12, 2024</p>
+                        <p>Helped organize the event with the Department of Food and Nutritional Sciences.</p>
+                    </div>
+                </div>
+                <div class="conf-card animate-on-scroll">
+                    <div class="conf-number">05</div>
+                    <div class="conf-content">
+                        <span class="conf-role role-participant">Participant</span>
+                        <h3>National Symposium — World Milk Day</h3>
+                        <p class="conf-location"><i class="fas fa-map-marker-alt"></i> UCP Lahore</p>
+                        <p class="conf-date"><i class="far fa-calendar-alt"></i> Jun 3, 2024</p>
+                        <p>Participated in symposium celebrating World Milk Day and dairy science advancements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-envelope"></i> Get In Touch</span>
+                <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <p>I'm always open to discussing research opportunities, collaborations,
+                        or anything related to food science and technology. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+923440575710">(+92) 3440575710</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:inamhassan746@gmail.com">inamhassan746@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/inam-ul-hassan"
+                                    target="_blank">linkedin.com/in/inam-ul-hassan</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Lahore, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="mailto:inamhassan746@gmail.com" class="social-link" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/inam-ul-hassan" target="_blank" class="social-link"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="tel:+923440575710" class="social-link" aria-label="Phone"><i
+                                class="fas fa-phone-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Inam Ul Hassan<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Food Science Professional | Gold Medalist | Global UGRAD Scholar</p>
+                <div class="footer-social">
+                    <a href="mailto:inamhassan746@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/inam-ul-hassan" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="tel:+923440575710" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
+                </div>
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">&copy; 2025 Inam Ul Hassan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
