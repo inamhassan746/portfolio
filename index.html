@@ -3,170 +3,255 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inam Ul Hassan | Food Science and Technology</title>
+<title>Inam Ul Hassan | Food Science Portfolio</title>
 <meta name="description" content="Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.">
 <style>
+/* Change the colors here to restyle the whole page */
 :root{
-  --bg:#F4F6F2; --card:#FFFFFF; --ink:#1B2B22; --muted:#55645B;
-  --accent:#8A5A00; --accent-bg:#F3DFA8; --line:#D7DED6; --ph:#E3E9E1;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#121C17; --card:#18261F; --ink:#EAF0EA; --muted:#A5B3A9;
-    --accent:#F0C24B; --accent-bg:#3A3012; --line:#2A3A31; --ph:#1F2E26;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#121C17; --card:#18261F; --ink:#EAF0EA; --muted:#A5B3A9;
-  --accent:#F0C24B; --accent-bg:#3A3012; --line:#2A3A31; --ph:#1F2E26;
+  --bg:#FFFFFF; --bg2:#EEF4FC; --card:#FFFFFF; --ink:#0B2545; --muted:#3F557A;
+  --accent:#1F5FBF; --accent2:#0B3D91; --line:#C9D8EE;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Times New Roman",Times,serif}
+h1,h2,h3{margin:0;line-height:1.2}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+ 
+/* navigation */
+nav{position:fixed;inset:0 0 auto 0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--accent)}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:600;font-size:15px}
+nav ul a:hover{color:var(--accent)}
  
 /* hero */
-.hero{padding:72px 0 56px}
-.hero .wrap{display:flex;gap:40px;align-items:center;flex-wrap:wrap}
-.hero-text{flex:1 1 420px;max-width:640px}
-.hero h1{font-size:clamp(34px,6vw,56px);font-weight:600;letter-spacing:-.01em}
-.hero p{font-size:19px;color:var(--muted);margin:20px 0 0;max-width:34em}
-.btn{display:inline-block;margin-top:30px;padding:13px 26px;background:var(--ink);color:var(--bg);
-  text-decoration:none;font-weight:600;border-radius:999px}
-.btn:hover{background:var(--accent);color:#fff}
-.portrait{flex:0 1 240px}
-.portrait img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:6px solid var(--accent-bg)}
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
+.role{color:var(--accent2);font-weight:700;margin:0 0 10px}
+.hero h1{font-size:clamp(38px,6vw,62px);letter-spacing:-.02em}
+.typing{font-size:22px;margin:14px 0 0;color:var(--muted)}
+.typing b{color:var(--accent)}
+.caret{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:2px;vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.bio{max-width:34em;color:var(--muted);margin:18px 0 0}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--accent)}
+.btn.fill{background:var(--accent);color:#fff}
+.btn.line{color:var(--accent)}
+.btn:hover{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.stats{display:flex;gap:34px;margin-top:38px;flex-wrap:wrap}
+.stats div{font-size:14px;color:var(--muted)}
+.stats strong{display:block;font-size:32px;color:var(--ink)}
+.photo{position:relative;max-width:360px;justify-self:center;width:100%}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;border:3px solid var(--accent);background:var(--card);display:block}
+.badge{position:absolute;background:var(--card);border:1px solid var(--accent);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:700;box-shadow:0 6px 18px rgba(15,60,140,.18)}
+.b1{top:14px;left:-22px}.b2{top:46%;right:-22px}.b3{bottom:22px;left:-14px}
  
-/* work */
-#work{padding:24px 0 40px}
-#work>.wrap>h2{font-size:30px;margin-bottom:34px}
-.item{display:grid;grid-template-columns:1.15fr 1fr;gap:34px;align-items:center;
-  padding:34px 0;border-top:1px solid var(--line)}
-.item:nth-of-type(even) .photos{order:2}
-.item.no-photo{grid-template-columns:1fr}
-.photos{display:grid;gap:10px}
-.photos.three{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}
-.photos.three img:first-child{grid-row:1 / span 2}
-.photos img{width:100%;height:100%;min-height:200px;aspect-ratio:4/3;object-fit:cover;
-  border-radius:10px;background:var(--ph);display:block}
-.item h3{font-size:25px;margin-bottom:10px}
-.item p{margin:0;color:var(--muted);max-width:30em}
-.where{font-size:15px;color:var(--accent);font-weight:600;margin-bottom:6px}
+/* sections */
+section{padding:84px 0}
+section.alt{background:var(--bg2)}
+.head{margin-bottom:34px}
+.head small{color:var(--accent2);font-weight:700;font-size:15px}
+.head h2{font-size:clamp(28px,4vw,38px);margin-top:4px}
+.about p{max-width:42em;color:var(--muted);margin:0 0 14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.fact span{display:block;font-size:13px;color:var(--accent2);font-weight:700}
+.fact b{font-size:16px}
  
-/* footer */
-footer{padding:48px 0 64px;border-top:1px solid var(--line)}
-footer h2{font-size:26px;margin-bottom:12px}
-footer a{font-weight:600;margin-right:22px;text-decoration-thickness:2px;text-underline-offset:4px}
-footer a:hover{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card .pics{display:grid;gap:3px;background:var(--line)}
+.card .pics.three{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}
+.card .pics.three img:first-child{grid-row:1 / span 2}
+.card .pics img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg2)}
+.card .txt{padding:18px 20px 22px}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.tag{display:inline-block;margin-bottom:10px;font-size:13px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);padding:3px 12px;border-radius:999px}
  
-@media (max-width:760px){
-  .hero{padding:48px 0 36px}
-  .item{grid-template-columns:1fr;gap:18px}
-  .item:nth-of-type(even) .photos{order:0}
-  .photos img{min-height:0}
+/* contact */
+.contact{text-align:center}
+.contact p{color:var(--muted);margin:0 auto 24px;max-width:32em}
+.contact .btns{justify-content:center}
+footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+ 
+@media (max-width:800px){
+  nav ul{gap:16px}nav ul li:nth-child(n+4){display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .photo{max-width:300px}.b1{left:-8px}.b2{right:-8px}.b3{left:-4px}
+  section{padding:64px 0}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.caret{animation:none}}
 </style>
 </head>
 <body>
  
-<header class="hero">
+<nav>
   <div class="wrap">
-    <div class="hero-text">
+    <a class="logo" href="#top">IH</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#abroad">Abroad</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+ 
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="role">Food Science Professional</p>
       <h1>Hi, I’m Inam Ul Hassan.</h1>
-      <p>I’m a Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.</p>
-      <p>I graduated from the University of Central Punjab with a CGPA of 4.00/4.00 and a Gold Medal. I want to learn how to design foods properly.</p>
-      <a class="btn" href="#work">See my work</a>
+      <p class="typing">I’m passionate about <b id="typed"></b><span class="caret"></span></p>
+      <p class="bio">I’m a Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.</p>
+      <div class="btns">
+        <a class="btn fill" href="#work">See my work</a>
+        <a class="btn line" href="#contact">Get in touch</a>
+      </div>
+      <div class="stats">
+        <div><strong>4.00</strong>CGPA</div>
+        <div><strong>1</strong>Gold Medal</div>
+        <div><strong>30</strong>vendors supported</div>
+      </div>
     </div>
-    <div class="portrait"><img src="images/profile.jpg" alt="Portrait of Inam Ul Hassan" onerror="this.parentNode.style.display='none'"></div>
+    <div class="photo">
+      <img id="profile" src="images/profile.jpg" alt="Portrait of Inam Ul Hassan">
+      <span class="badge b1">Gold Medalist</span>
+      <span class="badge b2">UGRAD Scholar</span>
+      <span class="badge b3">4.00 CGPA</span>
+    </div>
   </div>
 </header>
  
-<main id="work">
+<section id="about" class="alt about">
   <div class="wrap">
-    <h2>My work</h2>
- 
-    <article class="item">
-      <div class="photos"><img src="images/truffles.jpg" alt="Chickpea truffles" onerror="this.parentNode.parentNode.classList.add('no-photo');this.parentNode.remove()"></div>
-      <div>
-        <h3>Chickpea Truffles</h3>
-        <p>My thesis. I compared the nutrition profile of Desi and Kabuli chickpeas, then used both to make energy-dense chocolate truffles. I tested their taste, storage and color.</p>
-      </div>
-    </article>
- 
-    <article class="item">
-      <div class="photos"><img src="images/dazest-bites.jpg" alt="Dazest Bites snack" onerror="this.parentNode.parentNode.classList.add('no-photo');this.parentNode.remove()"></div>
-      <div>
-        <h3>Dazest Bites</h3>
-        <p>A snack made with dates and mixed seeds. It won 3rd place in my university’s Food Innovation Competition.</p>
-      </div>
-    </article>
- 
-    <article class="item">
-      <div class="photos"><img src="images/lozenges.jpg" alt="Eucalyptus, honey and lime lozenges" onerror="this.parentNode.parentNode.classList.add('no-photo');this.parentNode.remove()"></div>
-      <div>
-        <h3>Lozenges</h3>
-        <p>Eucalyptus, honey and lime lozenges, made in my confectionery course.</p>
-      </div>
-    </article>
- 
-    <article class="item">
-      <div class="photos three">
-        <img src="images/safebite-1.jpg" alt="SafeBite initiative photo 1" onerror="this.remove()">
-        <img src="images/safebite-2.jpg" alt="SafeBite initiative photo 2" onerror="this.remove()">
-        <img src="images/safebite-3.jpg" alt="SafeBite initiative photo 3" onerror="this.remove()">
-      </div>
-      <div>
-        <h3>SafeBite</h3>
-        <p>A hygiene project I started for street food vendors in Lahore. With my Head of Department, I trained volunteers, and we gave protective equipment and hygiene guidance to 30 vendors. It was supported by a U.S. Department of State and IREX Community Development Initiative Award.</p>
-      </div>
-    </article>
- 
-    <article class="item">
-      <div class="photos"><img src="images/ugrad-class.jpg" alt="Global UGRAD at Kansas State University" onerror="this.parentNode.parentNode.classList.add('no-photo');this.parentNode.remove()"></div>
-      <div>
-        <h3>Global UGRAD at Kansas State University</h3>
-        <p>A semester abroad where I studied Science of Food and Food and Health.</p>
-      </div>
-    </article>
- 
-    <article class="item">
-      <div class="photos"><img src="images/konza.jpg" alt="Volunteering at Konza Student Table" onerror="this.parentNode.parentNode.classList.add('no-photo');this.parentNode.remove()"></div>
-      <div>
-        <h3>Konza Student Table</h3>
-        <p>Every week I worked there to pack and distribute meals for K-State students and their families.</p>
-      </div>
-    </article>
- 
-    <article class="item">
-      <div class="photos"><img src="images/borlaug-table.jpg" alt="At the Feed the Future Innovation Lab table, Borlaug International Dialogue" onerror="this.parentNode.parentNode.classList.add('no-photo');this.parentNode.remove()"></div>
-      <div>
-        <h3>Borlaug International Dialogue, Iowa</h3>
-        <p>I was selected to represent Kansas State University at its Feed the Future Innovation Lab table.</p>
-      </div>
-    </article>
- 
-    <article class="item">
-      <div class="photos"><img src="images/factory.jpg" alt="Food factory" onerror="this.parentNode.parentNode.classList.add('no-photo');this.parentNode.remove()"></div>
-      <div>
-        <h3>Jalal Sons</h3>
-        <p>I worked as a Food Safety Officer in a food factory, testing moisture, Brix, gluten, and so on at different stages of production.</p>
-      </div>
-    </article>
+    <div class="head"><small>Introduction</small><h2>About me</h2></div>
+    <p>I graduated from the University of Central Punjab with a CGPA of 4.00/4.00 and a Gold Medal. I want to learn how to design foods properly.</p>
+    <div class="facts">
+      <div class="fact"><span>Degree</span><b>BSc Food Science and Technology</b></div>
+      <div class="fact"><span>University</span><b>University of Central Punjab</b></div>
+      <div class="fact"><span>Exchange</span><b>Kansas State University</b></div>
+      <div class="fact"><span>Next step</span><b>Food product design</b></div>
+    </div>
   </div>
-</main>
+</section>
  
-<footer>
+<section id="work">
   <div class="wrap">
-    <h2>Let’s connect</h2>
-    <a href="https://linkedin.com/in/inam-ul-hassan">LinkedIn</a>
-    <a href="mailto:inamhassan746@gmail.com">Email</a>
-  </div>
-</footer>
+    <div class="head"><small>My work</small><h2>Products and projects</h2></div>
+    <div class="grid">
  
+      <article class="card">
+        <div class="pics"><img src="images/truffles.jpg" alt="Chickpea truffles"></div>
+        <div class="txt"><span class="tag">Thesis</span><h3>Chickpea Truffles</h3>
+        <p>My thesis. I compared the nutrition profile of Desi and Kabuli chickpeas, then used both to make energy-dense chocolate truffles. I tested their taste, storage and color.</p></div>
+      </article>
+ 
+      <article class="card">
+        <div class="pics"><img src="images/dazest-bites.jpg" alt="Dazest Bites snack"></div>
+        <div class="txt"><span class="tag">3rd place</span><h3>Dazest Bites</h3>
+        <p>A snack made with dates and mixed seeds. It won 3rd place in my university’s Food Innovation Competition.</p></div>
+      </article>
+ 
+      <article class="card">
+        <div class="pics"><img src="images/lozenges.jpg" alt="Eucalyptus, honey and lime lozenges"></div>
+        <div class="txt"><span class="tag">Confectionery</span><h3>Lozenges</h3>
+        <p>Eucalyptus, honey and lime lozenges, made in my confectionery course.</p></div>
+      </article>
+ 
+      <article class="card">
+        <div class="pics three">
+          <img src="images/safebite-1.jpg" alt="SafeBite photo 1">
+          <img src="images/safebite-2.jpg" alt="SafeBite photo 2">
+          <img src="images/safebite-3.jpg" alt="SafeBite photo 3">
+        </div>
+        <div class="txt"><span class="tag">Community project</span><h3>SafeBite</h3>
+        <p>A hygiene project I started for street food vendors in Lahore. With my Head of Department, I trained volunteers, and we gave protective equipment and hygiene guidance to 30 vendors. It was supported by a U.S. Department of State and IREX Community Development Initiative Award.</p></div>
+      </article>
+ 
+    </div>
+  </div>
+</section>
+ 
+<section id="abroad" class="alt">
+  <div class="wrap">
+    <div class="head"><small>Beyond my university</small><h2>Abroad and in industry</h2></div>
+    <div class="grid">
+ 
+      <article class="card">
+        <div class="pics"><img src="images/ugrad-class.jpg" alt="Global UGRAD at Kansas State University"></div>
+        <div class="txt"><span class="tag">Exchange</span><h3>Global UGRAD at Kansas State University</h3>
+        <p>A semester abroad where I studied Science of Food and Food and Health.</p></div>
+      </article>
+ 
+      <article class="card">
+        <div class="pics"><img src="images/konza.jpg" alt="Volunteering at Konza Student Table"></div>
+        <div class="txt"><span class="tag">Volunteering</span><h3>Konza Student Table</h3>
+        <p>Every week I worked there to pack and distribute meals for K-State students and their families.</p></div>
+      </article>
+ 
+      <article class="card">
+        <div class="pics"><img src="images/borlaug-table.jpg" alt="At the Feed the Future Innovation Lab table"></div>
+        <div class="txt"><span class="tag">Conference</span><h3>Borlaug International Dialogue, Iowa</h3>
+        <p>I was selected to represent Kansas State University at its Feed the Future Innovation Lab table.</p></div>
+      </article>
+ 
+      <article class="card">
+        <div class="pics"><img src="images/factory.jpg" alt="Food factory"></div>
+        <div class="txt"><span class="tag">Work experience</span><h3>Jalal Sons</h3>
+        <p>I worked as a Food Safety Officer in a food factory, testing moisture, Brix, gluten, and so on at different stages of production.</p></div>
+      </article>
+ 
+    </div>
+  </div>
+</section>
+ 
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="head"><small>Get in touch</small><h2>Let’s connect</h2></div>
+    <p>I’m happy to talk about food science, product development or study opportunities.</p>
+    <div class="btns">
+      <a class="btn fill" href="mailto:inamhassan746@gmail.com">Email</a>
+      <a class="btn line" href="https://linkedin.com/in/inam-ul-hassan">LinkedIn</a>
+    </div>
+  </div>
+</section>
+ 
+<footer>© 2026 Inam Ul Hassan</footer>
+ 
+<script>
+/* typing line */
+(function(){
+  var words=["food innovation","product development","food safety and quality"],el=document.getElementById("typed");
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=words[0];return;}
+  var w=0,c=0,del=false;
+  (function tick(){
+    var word=words[w];
+    el.textContent=word.slice(0,c);
+    if(!del&&c===word.length){del=true;return setTimeout(tick,1500);}
+    if(del&&c===0){del=false;w=(w+1)%words.length;}
+    c+=del?-1:1;
+    setTimeout(tick,del?40:80);
+  })();
+})();
+ 
+/* a missing photo never breaks the page */
+function dropImg(img){
+  var box=img.parentNode;
+  img.remove();
+  if(box.classList.contains("pics")&&!box.querySelector("img")){box.remove();}
+  if(img.id==="profile"){box.querySelectorAll(".badge").forEach(function(b){b.remove();});box.remove();}
+}
+document.querySelectorAll(".pics img,#profile").forEach(function(img){
+  img.addEventListener("error",function(){dropImg(img);});
+  if(img.complete&&img.naturalWidth===0){dropImg(img);}
+});
+</script>
 </body>
 </html>
+ 
