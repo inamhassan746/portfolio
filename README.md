@@ -1,4 +1,4 @@
-::: {align="center"}
+
 # Inam Ul Hassan
 
 ### Food Science & Technology
@@ -59,7 +59,3 @@ professional interests.
     Hassan](https://linkedin.com/in/inam-ul-hassan)
 
 ------------------------------------------------------------------------
-
-::: {align="center"}
-*Built with HTML, CSS, and JavaScript.*
-:::
