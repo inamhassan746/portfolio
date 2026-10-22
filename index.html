@@ -1,255 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inam Ul Hassan | Food Science Portfolio</title>
-<meta name="description" content="Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.">
-<style>
-/* Change the colors here to restyle the whole page */
-:root{
-  --bg:#FFFFFF; --bg2:#EEF4FC; --card:#FFFFFF; --ink:#0B2545; --muted:#3F557A;
-  --accent:#1F5FBF; --accent2:#0B3D91; --line:#C9D8EE;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Times New Roman",Times,serif}
-h1,h2,h3{margin:0;line-height:1.2}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
- 
-/* navigation */
-nav{position:fixed;inset:0 0 auto 0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--accent)}
-nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
-nav ul a{text-decoration:none;color:var(--muted);font-weight:600;font-size:15px}
-nav ul a:hover{color:var(--accent)}
- 
-/* hero */
-.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;background:linear-gradient(180deg,var(--bg2),var(--bg))}
-.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
-.role{color:var(--accent2);font-weight:700;margin:0 0 10px}
-.hero h1{font-size:clamp(38px,6vw,62px);letter-spacing:-.02em}
-.typing{font-size:22px;margin:14px 0 0;color:var(--muted)}
-.typing b{color:var(--accent)}
-.caret{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:2px;vertical-align:-2px;animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
-.hero p.bio{max-width:34em;color:var(--muted);margin:18px 0 0}
-.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:12px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--accent)}
-.btn.fill{background:var(--accent);color:#fff}
-.btn.line{color:var(--accent)}
-.btn:hover{background:var(--accent2);border-color:var(--accent2);color:#fff}
-.stats{display:flex;gap:34px;margin-top:38px;flex-wrap:wrap}
-.stats div{font-size:14px;color:var(--muted)}
-.stats strong{display:block;font-size:32px;color:var(--ink)}
-.photo{position:relative;max-width:360px;justify-self:center;width:100%}
-.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;border:3px solid var(--accent);background:var(--card);display:block}
-.badge{position:absolute;background:var(--card);border:1px solid var(--accent);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:700;box-shadow:0 6px 18px rgba(15,60,140,.18)}
-.b1{top:14px;left:-22px}.b2{top:46%;right:-22px}.b3{bottom:22px;left:-14px}
- 
-/* sections */
-section{padding:84px 0}
-section.alt{background:var(--bg2)}
-.head{margin-bottom:34px}
-.head small{color:var(--accent2);font-weight:700;font-size:15px}
-.head h2{font-size:clamp(28px,4vw,38px);margin-top:4px}
-.about p{max-width:42em;color:var(--muted);margin:0 0 14px}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px}
-.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.fact span{display:block;font-size:13px;color:var(--accent2);font-weight:700}
-.fact b{font-size:16px}
- 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.card .pics{display:grid;gap:3px;background:var(--line)}
-.card .pics.three{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}
-.card .pics.three img:first-child{grid-row:1 / span 2}
-.card .pics img{width:100%;height:auto;max-height:360px;aspect-ratio:4/3;object-fit:contain;display:block;background:var(--bg2)}
-.card .txt{padding:18px 20px 22px}
-.card h3{font-size:21px;margin-bottom:8px}
-.card p{margin:0;color:var(--muted);font-size:16px}
-.tag{display:inline-block;margin-bottom:10px;font-size:13px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);padding:3px 12px;border-radius:999px}
- 
-/* contact */
-.contact{text-align:center}
-.contact p{color:var(--muted);margin:0 auto 24px;max-width:32em}
-.contact .btns{justify-content:center}
-footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
- 
-@media (max-width:800px){
-  nav ul{gap:16px}nav ul li:nth-child(n+4){display:none}
-  .hero .wrap{grid-template-columns:1fr;gap:40px}
-  .photo{max-width:300px}.b1{left:-8px}.b2{right:-8px}.b3{left:-4px}
-  section{padding:64px 0}
-}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.caret{animation:none}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Inam Ul Hassan | Food Science Portfolio</title>
+  <meta name="description" content="Food Science and Technology graduate who enjoys turning everyday ingredients into foods people enjoy.">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
- 
-<nav>
-  <div class="wrap">
-    <a class="logo" href="#top">IH</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#abroad">Abroad</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
- 
-<header class="hero" id="top">
-  <div class="wrap">
-    <div>
-      <p class="role">Food Science Professional</p>
-      <h1>Hi, I’m Inam Ul Hassan.</h1>
-      <p class="typing">I’m passionate about <b id="typed"></b><span class="caret"></span></p>
-      <p class="bio">I’m a Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.</p>
-      <div class="btns">
-        <a class="btn fill" href="#work">See my work</a>
-        <a class="btn line" href="#contact">Get in touch</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top" aria-label="Inam Ul Hassan home">IH</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#abroad">Abroad</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="role">Food Science Professional</p>
+        <h1>Hi, I’m Inam Ul Hassan.</h1>
+        <p class="typing">I’m passionate about <strong id="typed">food innovation</strong><span class="caret" aria-hidden="true"></span></p>
+        <p class="bio">I’m a Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.</p>
+        <div class="btns">
+          <a class="btn fill" href="#work">See my work</a>
+          <a class="btn line" href="#contact">Get in touch</a>
+        </div>
+        <div class="stats" aria-label="Highlights">
+          <div><strong>4.00</strong><span>CGPA</span></div>
+          <div><strong>1</strong><span>Gold Medal</span></div>
+          <div><strong>30</strong><span>vendors supported</span></div>
+        </div>
       </div>
-      <div class="stats">
+      <div class="photo">
+        <img id="profile" src="profile.jpg" alt="Portrait of Inam Ul Hassan" fetchpriority="high">
+        <span class="badge b1">Gold Medalist</span>
+        <span class="badge b2">UGRAD Scholar</span>
+        <span class="badge b3">4.00 CGPA</span>
       </div>
     </div>
-    <div class="photo">
-      <img id="profile" src="profile.jpg" alt="Portrait of Inam Ul Hassan">
-      <span class="badge b1">Gold Medalist</span>
-      <span class="badge b2">UGRAD Scholar</span>
-      <span class="badge b3">4.00 CGPA</span>
-    </div>
-  </div>
-</header>
- 
-<section id="about" class="alt about">
-  <div class="wrap">
-    <div class="head"><small>Introduction</small><h2>About me</h2></div>
-    <p>I graduated from the University of Central Punjab with a CGPA of 4.00/4.00 and a Gold Medal. I love developing food products that are nutritious and that people actually want to eat, and I want to learn how to design them properly, from the first idea to the finished product.</p>
-    <div class="facts">
-      <div class="fact"><span>Degree</span><b>BSc Food Science and Technology</b></div>
-      <div class="fact"><span>University</span><b>University of Central Punjab</b></div>
-      <div class="fact"><span>Exchange</span><b>Kansas State University</b></div>
-      
-    </div>
-  </div>
-</section>
- 
-<section id="work">
-  <div class="wrap">
-    <div class="head"><small>My work</small><h2>Products and projects</h2></div>
-    <div class="grid">
- 
-      <article class="card">
-        <div class="txt"><span class="tag">Thesis</span><h3>Chickpea Truffles</h3>
-        <p>My thesis. I compared the nutrition profile of Desi and Kabuli chickpeas, then used both to make energy-dense chocolate truffles. I tested their taste, storage and color.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="image/dazest-bites.jpeg" alt="Dazest Bites snack"></div>
-        <div class="txt"><span class="tag">3rd place</span><h3>Dazest Bites</h3>
-        <p>A snack made with dates and mixed seeds. It won 3rd place in my university’s Food Innovation Competition.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="image/lozenges.jpeg" alt="Eucalyptus, honey and lime lozenges"></div>
-        <div class="txt"><span class="tag">Confectionery</span><h3>Lozenges</h3>
-        <p>Eucalyptus, honey and lime lozenges, made in my confectionery course.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="image/safebite-1.jpeg" alt="SafeBite project with a street food vendor"></div>
-        <div class="txt"><span class="tag">Community project</span><h3>SafeBite</h3>
-        <p>A hygiene project I started for street food vendors in Lahore. With my Head of Department, I trained volunteers, and we gave protective equipment and hygiene guidance to 30 vendors. It was supported by a U.S. Department of State and IREX Community Development Initiative Award.</p></div>
-      </article>
- 
-    </div>
-  </div>
-</section>
- 
-<section id="abroad" class="alt">
-  <div class="wrap">
-    <div class="head"><small>Beyond my university</small><h2>Study abroad and Industrial experience</h2></div>
-    <div class="grid">
- 
-      <article class="card">
-        <div class="pics"><img src="image/ugrad-class.jpeg" alt="Global UGRAD at Kansas State University"></div>
-        <div class="txt"><span class="tag">Exchange</span><h3>Global UGRAD at Kansas State University</h3>
-        <p>It was a fully funded semester exchange program at Kansas State University, where I studied Science of Food, Food and Health, American History and Public Speaking. I was actively involved in volunteer work, and I also delivered a presentation on Pakistani culture at an elementary school there.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="image/konza.jpeg" alt="Volunteering at Konza Student Table"></div>
-        <div class="txt"><span class="tag">Volunteering</span><h3>Konza Student Table</h3>
-        <p>Every week I worked there to pack and distribute meals for K-State students and their families.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="image/borlaug-table.jpeg" alt="At the Feed the Future Innovation Lab table"></div>
-        <div class="txt"><span class="tag">Conference</span><h3>Borlaug International Dialogue, Iowa</h3>
-        <p>I was selected to represent Kansas State University at its Feed the Future Innovation Lab table.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="image/factory-1.jpeg" alt="Food factory testing area"><img src="image/factory-2.jpeg" alt="Food factory production work"></div>
-        <div class="txt"><span class="tag">Work experience</span><h3>Jalal Sons</h3>
-        <p>I worked as a Food Safety Officer in a food factory, testing moisture, Brix, gluten, and so on at different stages of production.</p></div>
-      </article>
- 
-    </div>
-  </div>
-</section>
- 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="head"><small>Get in touch</small><h2>Let’s connect</h2></div>
-    <p>I’m happy to talk about food science, product development or study opportunities.</p>
-    <div class="btns">
-      <a class="btn fill" href="mailto:inamhassan746@gmail.com">Email</a>
-      <a class="btn line" href="https://linkedin.com/in/inam-ul-hassan">LinkedIn</a>
-    </div>
-  </div>
-</section>
- 
-<footer>© 2026 Inam Ul Hassan</footer>
- 
-<script>
-/* typing line */
-(function(){
-  var words=["food innovation","product development","food safety and quality"],el=document.getElementById("typed");
-  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=words[0];return;}
-  var w=0,c=0,del=false;
-  (function tick(){
-    var word=words[w];
-    el.textContent=word.slice(0,c);
-    if(!del&&c===word.length){del=true;return setTimeout(tick,1500);}
-    if(del&&c===0){del=false;w=(w+1)%words.length;}
-    c+=del?-1:1;
-    setTimeout(tick,del?40:80);
-  })();
-})();
- 
-/* a missing photo never breaks the page */
-function dropImg(img){
-  var box=img.parentNode;
-  img.remove();
-  if(box.classList.contains("pics")&&!box.querySelector("img")){box.remove();}
-  if(img.id==="profile"){box.querySelectorAll(".badge").forEach(function(b){b.remove();});box.remove();}
-}
-document.querySelectorAll(".pics img,#profile").forEach(function(img){
-  var triedAlt=false;
-  function fail(){
-    /* the profile photo may sit in the main folder or in images/ */
-    if(img.id==="profile"&&!triedAlt){triedAlt=true;img.src="profile.jpg";return;}
-    dropImg(img);
-  }
-  img.addEventListener("error",fail);
-  if(img.complete&&img.naturalWidth===0){fail();}
-});
-</script>
+  </header>
+
+  <main>
+    <section id="about" class="alt about">
+      <div class="wrap">
+        <div class="head"><p class="eyebrow">Introduction</p><h2>About me</h2></div>
+        <p class="about-intro">I graduated from the University of Central Punjab with a CGPA of 4.00/4.00 and a Gold Medal. I want to learn how to design foods properly.</p>
+        <div class="facts">
+          <div class="fact"><span>Degree</span><strong>BSc Food Science and Technology</strong></div>
+          <div class="fact"><span>University</span><strong>University of Central Punjab</strong></div>
+          <div class="fact"><span>Exchange</span><strong>Kansas State University</strong></div>
+          <div class="fact"><span>Next step</span><strong>Food product design</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="head"><p class="eyebrow">My work</p><h2>Products and projects</h2></div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="no-photo" aria-label="No chickpea truffles photograph was included in the supplied project files"><span>Thesis project</span></div>
+            <div class="card-text"><span class="tag">Thesis</span><h3>Chickpea Truffles</h3>
+              <p>My thesis. I compared the nutrition profile of Desi and Kabuli chickpeas, then used both to make energy-dense chocolate truffles. I tested their taste, storage and color.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="pics"><img src="image/dazest-bites.jpeg" alt="Dazest Bites date and mixed-seed snack" loading="lazy"></div>
+            <div class="card-text"><span class="tag">3rd place</span><h3>Dazest Bites</h3>
+              <p>A snack made with dates and mixed seeds. It won 3rd place in my university’s Food Innovation Competition.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="pics"><img src="image/lozenges.jpeg" alt="Eucalyptus, honey and lime lozenges" loading="lazy"></div>
+            <div class="card-text"><span class="tag">Confectionery</span><h3>Lozenges</h3>
+              <p>Eucalyptus, honey and lime lozenges, made in my confectionery course.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="pics"><img src="image/safebite-1.jpeg" alt="SafeBite community hygiene project with a street food vendor" loading="lazy"></div>
+            <div class="card-text"><span class="tag">Community project</span><h3>SafeBite</h3>
+              <p>A hygiene project I started for street food vendors in Lahore. With my Head of Department, I trained volunteers, and we gave protective equipment and hygiene guidance to 30 vendors. It was supported by a U.S. Department of State and IREX Community Development Initiative Award.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="abroad" class="alt">
+      <div class="wrap">
+        <div class="head"><p class="eyebrow">Beyond my university</p><h2>Abroad and in industry</h2></div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="pics"><img src="image/ugrad-class.jpeg" alt="Global UGRAD experience at Kansas State University" loading="lazy"></div>
+            <div class="card-text"><span class="tag">Exchange</span><h3>Global UGRAD at Kansas State University</h3>
+              <p>A semester abroad where I studied Science of Food and Food and Health.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="pics"><img src="image/konza.jpeg" alt="Volunteering at Konza Student Table" loading="lazy"></div>
+            <div class="card-text"><span class="tag">Volunteering</span><h3>Konza Student Table</h3>
+              <p>Every week I worked there to pack and distribute meals for K-State students and their families.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="pics"><img src="image/borlaug-table.jpeg" alt="At the Feed the Future Innovation Lab table" loading="lazy"></div>
+            <div class="card-text"><span class="tag">Conference</span><h3>Borlaug International Dialogue, Iowa</h3>
+              <p>I was selected to represent Kansas State University at its Feed the Future Innovation Lab table.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="pics gallery-two">
+              <img src="image/factory-1.jpeg" alt="Food factory work experience, photo one" loading="lazy">
+              <img src="image/factory-2.jpeg" alt="Food factory work experience, photo two" loading="lazy">
+            </div>
+            <div class="card-text"><span class="tag">Work experience</span><h3>Jalal Sons</h3>
+              <p>I worked as a Food Safety Officer in a food factory, testing moisture, Brix, gluten, and so on at different stages of production.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="head"><p class="eyebrow">Get in touch</p><h2>Let’s connect</h2></div>
+        <p>I’m happy to talk about food science, product development or study opportunities.</p>
+        <div class="btns contact-btns">
+          <a class="btn fill" href="mailto:inamhassan746@gmail.com">Email</a>
+          <a class="btn line" href="https://linkedin.com/in/inam-ul-hassan" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© 2026 Inam Ul Hassan</div></footer>
 </body>
 </html>
- 

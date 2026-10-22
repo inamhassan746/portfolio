@@ -1,257 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inam Ul Hassan | Food Science Portfolio</title>
-<meta name="description" content="Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.">
-<style>
-/* Change the colors here to restyle the whole page */
-:root{
-  --bg:#FFFFFF; --bg2:#EEF4FC; --card:#FFFFFF; --ink:#0B2545; --muted:#3F557A;
-  --accent:#1F5FBF; --accent2:#0B3D91; --line:#C9D8EE;
+/* Responsive styles for Inam Ul Hassan's portfolio */
+:root {
+  --bg: #fff;
+  --bg-soft: #eef4fc;
+  --card: #fff;
+  --ink: #0b2545;
+  --muted: #3f557a;
+  --accent: #1f5fbf;
+  --accent-dark: #0b3d91;
+  --line: #c9d8ee;
+  --shadow: 0 12px 32px rgba(11, 37, 69, .08);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 "Times New Roman",Times,serif}
-h1,h2,h3{margin:0;line-height:1.2}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
- 
-/* navigation */
-nav{position:fixed;inset:0 0 auto 0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--accent)}
-nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
-nav ul a{text-decoration:none;color:var(--muted);font-weight:600;font-size:15px}
-nav ul a:hover{color:var(--accent)}
- 
-/* hero */
-.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;background:linear-gradient(180deg,var(--bg2),var(--bg))}
-.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
-.role{color:var(--accent2);font-weight:700;margin:0 0 10px}
-.hero h1{font-size:clamp(38px,6vw,62px);letter-spacing:-.02em}
-.typing{font-size:22px;margin:14px 0 0;color:var(--muted)}
-.typing b{color:var(--accent)}
-.caret{display:inline-block;width:2px;height:1em;background:var(--accent);margin-left:2px;vertical-align:-2px;animation:blink 1s steps(2) infinite}
-@keyframes blink{50%{opacity:0}}
-.hero p.bio{max-width:34em;color:var(--muted);margin:18px 0 0}
-.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:12px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--accent)}
-.btn.fill{background:var(--accent);color:#fff}
-.btn.line{color:var(--accent)}
-.btn:hover{background:var(--accent2);border-color:var(--accent2);color:#fff}
-.stats{display:flex;gap:34px;margin-top:38px;flex-wrap:wrap}
-.stats div{font-size:14px;color:var(--muted)}
-.stats strong{display:block;font-size:32px;color:var(--ink)}
-.photo{position:relative;max-width:360px;justify-self:center;width:100%}
-.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:24px;border:3px solid var(--accent);background:var(--card);display:block}
-.badge{position:absolute;background:var(--card);border:1px solid var(--accent);border-radius:999px;padding:7px 16px;font-size:14px;font-weight:700;box-shadow:0 6px 18px rgba(15,60,140,.18)}
-.b1{top:14px;left:-22px}.b2{top:46%;right:-22px}.b3{bottom:22px;left:-14px}
- 
-/* sections */
-section{padding:84px 0}
-section.alt{background:var(--bg2)}
-.head{margin-bottom:34px}
-.head small{color:var(--accent2);font-weight:700;font-size:15px}
-.head h2{font-size:clamp(28px,4vw,38px);margin-top:4px}
-.about p{max-width:42em;color:var(--muted);margin:0 0 14px}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px}
-.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.fact span{display:block;font-size:13px;color:var(--accent2);font-weight:700}
-.fact b{font-size:16px}
- 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.card .pics{display:grid;gap:3px;background:var(--line)}
-.card .pics.three{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}
-.card .pics.three img:first-child{grid-row:1 / span 2}
-.card .pics img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg2)}
-.card .txt{padding:18px 20px 22px}
-.card h3{font-size:21px;margin-bottom:8px}
-.card p{margin:0;color:var(--muted);font-size:16px}
-.tag{display:inline-block;margin-bottom:10px;font-size:13px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);padding:3px 12px;border-radius:999px}
- 
-/* contact */
-.contact{text-align:center}
-.contact p{color:var(--muted);margin:0 auto 24px;max-width:32em}
-.contact .btns{justify-content:center}
-footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
- 
-@media (max-width:800px){
-  nav ul{gap:16px}nav ul li:nth-child(n+4){display:none}
-  .hero .wrap{grid-template-columns:1fr;gap:40px}
-  .photo{max-width:300px}.b1{left:-8px}.b2{right:-8px}.b3{left:-4px}
-  section{padding:64px 0}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 18px/1.65 "Times New Roman", Times, serif;
+  overflow-wrap: break-word;
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.caret{animation:none}}
-</style>
-</head>
-<body>
- 
-<nav>
-  <div class="wrap">
-    <a class="logo" href="#top">IH</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#abroad">Abroad</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
- 
-<header class="hero" id="top">
-  <div class="wrap">
-    <div>
-      <p class="role">Food Science Professional</p>
-      <h1>Hi, I’m Inam Ul Hassan.</h1>
-      <p class="typing">I’m passionate about <b id="typed"></b><span class="caret"></span></p>
-      <p class="bio">I’m a Food Science and Technology graduate who likes turning everyday ingredients into foods people enjoy.</p>
-      <div class="btns">
-        <a class="btn fill" href="#work">See my work</a>
-        <a class="btn line" href="#contact">Get in touch</a>
-      </div>
-      <div class="stats">
-        <div><strong>4.00</strong>CGPA</div>
-        <div><strong>1</strong>Gold Medal</div>
-        <div><strong>30</strong>vendors supported</div>
-      </div>
-    </div>
-    <div class="photo">
-      <img id="profile" src="images/profile.jpg" alt="Portrait of Inam Ul Hassan">
-      <span class="badge b1">Gold Medalist</span>
-      <span class="badge b2">UGRAD Scholar</span>
-      <span class="badge b3">4.00 CGPA</span>
-    </div>
-  </div>
-</header>
- 
-<section id="about" class="alt about">
-  <div class="wrap">
-    <div class="head"><small>Introduction</small><h2>About me</h2></div>
-    <p>I graduated from the University of Central Punjab with a CGPA of 4.00/4.00 and a Gold Medal. I want to learn how to design foods properly.</p>
-    <div class="facts">
-      <div class="fact"><span>Degree</span><b>BSc Food Science and Technology</b></div>
-      <div class="fact"><span>University</span><b>University of Central Punjab</b></div>
-      <div class="fact"><span>Exchange</span><b>Kansas State University</b></div>
-      <div class="fact"><span>Next step</span><b>Food product design</b></div>
-    </div>
-  </div>
-</section>
- 
-<section id="work">
-  <div class="wrap">
-    <div class="head"><small>My work</small><h2>Products and projects</h2></div>
-    <div class="grid">
- 
-      <article class="card">
-        <div class="pics"><img src="images/truffles.jpg" alt="Chickpea truffles"></div>
-        <div class="txt"><span class="tag">Thesis</span><h3>Chickpea Truffles</h3>
-        <p>My thesis. I compared the nutrition profile of Desi and Kabuli chickpeas, then used both to make energy-dense chocolate truffles. I tested their taste, storage and color.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="images/dazest-bites.jpg" alt="Dazest Bites snack"></div>
-        <div class="txt"><span class="tag">3rd place</span><h3>Dazest Bites</h3>
-        <p>A snack made with dates and mixed seeds. It won 3rd place in my university’s Food Innovation Competition.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="images/lozenges.jpg" alt="Eucalyptus, honey and lime lozenges"></div>
-        <div class="txt"><span class="tag">Confectionery</span><h3>Lozenges</h3>
-        <p>Eucalyptus, honey and lime lozenges, made in my confectionery course.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics three">
-          <img src="images/safebite-1.jpg" alt="SafeBite photo 1">
-          <img src="images/safebite-2.jpg" alt="SafeBite photo 2">
-          <img src="images/safebite-3.jpg" alt="SafeBite photo 3">
-        </div>
-        <div class="txt"><span class="tag">Community project</span><h3>SafeBite</h3>
-        <p>A hygiene project I started for street food vendors in Lahore. With my Head of Department, I trained volunteers, and we gave protective equipment and hygiene guidance to 30 vendors. It was supported by a U.S. Department of State and IREX Community Development Initiative Award.</p></div>
-      </article>
- 
-    </div>
-  </div>
-</section>
- 
-<section id="abroad" class="alt">
-  <div class="wrap">
-    <div class="head"><small>Beyond my university</small><h2>Abroad and in industry</h2></div>
-    <div class="grid">
- 
-      <article class="card">
-        <div class="pics"><img src="images/ugrad-class.jpg" alt="Global UGRAD at Kansas State University"></div>
-        <div class="txt"><span class="tag">Exchange</span><h3>Global UGRAD at Kansas State University</h3>
-        <p>A semester abroad where I studied Science of Food and Food and Health.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="images/konza.jpg" alt="Volunteering at Konza Student Table"></div>
-        <div class="txt"><span class="tag">Volunteering</span><h3>Konza Student Table</h3>
-        <p>Every week I worked there to pack and distribute meals for K-State students and their families.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="images/borlaug-table.jpg" alt="At the Feed the Future Innovation Lab table"></div>
-        <div class="txt"><span class="tag">Conference</span><h3>Borlaug International Dialogue, Iowa</h3>
-        <p>I was selected to represent Kansas State University at its Feed the Future Innovation Lab table.</p></div>
-      </article>
- 
-      <article class="card">
-        <div class="pics"><img src="images/factory.jpg" alt="Food factory"></div>
-        <div class="txt"><span class="tag">Work experience</span><h3>Jalal Sons</h3>
-        <p>I worked as a Food Safety Officer in a food factory, testing moisture, Brix, gluten, and so on at different stages of production.</p></div>
-      </article>
- 
-    </div>
-  </div>
-</section>
- 
-<section id="contact" class="contact">
-  <div class="wrap">
-    <div class="head"><small>Get in touch</small><h2>Let’s connect</h2></div>
-    <p>I’m happy to talk about food science, product development or study opportunities.</p>
-    <div class="btns">
-      <a class="btn fill" href="mailto:inamhassan746@gmail.com">Email</a>
-      <a class="btn line" href="https://linkedin.com/in/inam-ul-hassan">LinkedIn</a>
-    </div>
-  </div>
-</section>
- 
-<footer>© 2026 Inam Ul Hassan</footer>
- 
-<script>
-/* typing line */
-(function(){
-  var words=["food innovation","product development","food safety and quality"],el=document.getElementById("typed");
-  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=words[0];return;}
-  var w=0,c=0,del=false;
-  (function tick(){
-    var word=words[w];
-    el.textContent=word.slice(0,c);
-    if(!del&&c===word.length){del=true;return setTimeout(tick,1500);}
-    if(del&&c===0){del=false;w=(w+1)%words.length;}
-    c+=del?-1:1;
-    setTimeout(tick,del?40:80);
-  })();
-})();
- 
-/* a missing photo never breaks the page */
-function dropImg(img){
-  var box=img.parentNode;
-  img.remove();
-  if(box.classList.contains("pics")&&!box.querySelector("img")){box.remove();}
-  if(img.id==="profile"){box.querySelectorAll(".badge").forEach(function(b){b.remove();});box.remove();}
+img { max-width: 100%; }
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.wrap { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, .96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
 }
-document.querySelectorAll(".pics img,#profile").forEach(function(img){
-  img.addEventListener("error",function(){dropImg(img);});
-  if(img.complete&&img.naturalWidth===0){dropImg(img);}
-});
-</script>
-</body>
-</html>
- 
+.nav-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { font: 800 22px/1 Arial, sans-serif; color: var(--accent); text-decoration: none; padding: 10px 0; }
+.nav-links { display: flex; align-items: center; gap: clamp(16px, 3vw, 30px); margin: 0; padding: 0; list-style: none; }
+.nav-links a { color: var(--muted); font: 600 15px/1.4 Arial, sans-serif; text-decoration: none; padding: 12px 0; }
+.nav-links a:hover { color: var(--accent); }
+.menu-toggle { display: none; border: 1px solid var(--line); border-radius: 10px; background: white; width: 44px; height: 42px; padding: 10px; cursor: pointer; }
+.menu-toggle span { display: block; height: 2px; background: var(--ink); margin: 4px 0; border-radius: 2px; }
+
+.hero { min-height: min(800px, calc(100svh - 66px)); display: flex; align-items: center; padding: clamp(60px, 9vw, 110px) 0 clamp(54px, 7vw, 80px); background: linear-gradient(180deg, var(--bg-soft), var(--bg)); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr); gap: clamp(34px, 6vw, 70px); align-items: center; }
+.role { color: var(--accent-dark); font-weight: 700; margin: 0 0 10px; }
+h1, h2, h3 { margin: 0; line-height: 1.2; }
+.hero h1 { font-size: clamp(2.35rem, 5.4vw, 4rem); letter-spacing: -.025em; max-width: 14ch; }
+.typing { font-size: clamp(1.1rem, 2.3vw, 1.4rem); margin: 18px 0 0; color: var(--muted); }
+.typing strong { color: var(--accent); }
+.caret { display: inline-block; width: 2px; height: 1em; background: var(--accent); margin-left: 3px; vertical-align: -2px; animation: blink 1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.bio { max-width: 35em; color: var(--muted); margin: 18px 0 0; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.btn { min-height: 46px; display: inline-flex; justify-content: center; align-items: center; padding: 10px 24px; border-radius: 999px; font: 700 15px/1.3 Arial, sans-serif; text-align: center; text-decoration: none; border: 2px solid var(--accent); transition: background-color .18s ease, color .18s ease, transform .18s ease; }
+.btn:hover { transform: translateY(-1px); background: var(--accent-dark); border-color: var(--accent-dark); color: white; }
+.btn.fill { background: var(--accent); color: white; }
+.btn.line { color: var(--accent); }
+.stats { display: flex; gap: clamp(18px, 3vw, 38px); margin-top: 36px; flex-wrap: wrap; }
+.stats div { color: var(--muted); font: 14px/1.4 Arial, sans-serif; }
+.stats strong { display: block; color: var(--ink); font: 700 clamp(1.6rem, 3vw, 2rem)/1.2 Arial, sans-serif; margin-bottom: 4px; }
+.stats span { display: block; }
+.photo { position: relative; width: min(100%, 360px); justify-self: center; }
+.photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; border-radius: 24px; border: 3px solid var(--accent); background: var(--card); display: block; box-shadow: var(--shadow); }
+.badge { position: absolute; max-width: calc(100% - 12px); background: var(--card); border: 1px solid var(--accent); border-radius: 999px; padding: 7px 14px; font: 700 13px/1.3 Arial, sans-serif; box-shadow: 0 6px 18px rgba(15, 60, 140, .16); white-space: nowrap; }
+.b1 { top: 14px; left: -18px; }
+.b2 { top: 46%; right: -18px; }
+.b3 { bottom: 22px; left: -12px; }
+
+section { padding: clamp(58px, 8vw, 88px) 0; }
+section.alt { background: var(--bg-soft); }
+.head { margin-bottom: 30px; }
+.eyebrow { color: var(--accent-dark); font: 700 15px/1.4 Arial, sans-serif; margin: 0 0 5px; }
+.head h2 { font-size: clamp(1.9rem, 4vw, 2.55rem); letter-spacing: -.015em; }
+.about-intro { max-width: 48em; color: var(--muted); margin: 0; }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 26px; }
+.fact { min-width: 0; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+.fact span { display: block; color: var(--accent-dark); font: 700 13px/1.4 Arial, sans-serif; margin-bottom: 6px; }
+.fact strong { display: block; font-size: 16px; line-height: 1.45; }
+
+.card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+.card { min-width: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 16px rgba(11, 37, 69, .035); }
+.pics { width: 100%; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #f5f8fd; border-bottom: 1px solid var(--line); }
+.pics img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.pics.gallery-two { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+.pics.gallery-two img { min-width: 0; background: #f5f8fd; }
+.no-photo { width: 100%; aspect-ratio: 4 / 3; display: grid; place-items: center; background: linear-gradient(135deg, #eef4fc, #dce8f8); border-bottom: 1px solid var(--line); color: var(--muted); }
+.no-photo span { border: 1px solid #b7cce8; padding: 9px 15px; border-radius: 999px; font: 700 13px/1.3 Arial, sans-serif; }
+.card-text { padding: 19px 20px 23px; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
+.card h3 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); margin: 0 0 9px; }
+.card p { color: var(--muted); font-size: 16px; line-height: 1.6; margin: 0; }
+.tag { display: inline-block; margin: 0 0 10px; font: 700 12px/1.35 Arial, sans-serif; color: var(--accent); background: #e7effb; padding: 5px 11px; border-radius: 999px; }
+
+.contact { text-align: center; }
+.contact p:not(.eyebrow) { color: var(--muted); max-width: 34em; margin: 0 auto 24px; }
+.contact-btns { justify-content: center; }
+footer { padding: 25px 0; text-align: center; color: var(--muted); font: 14px/1.5 Arial, sans-serif; border-top: 1px solid var(--line); }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.1fr) minmax(230px, .9fr); gap: 32px; }
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .b1 { left: -8px; } .b2 { right: -8px; } .b3 { left: -4px; }
+}
+@media (max-width: 640px) {
+  html { scroll-padding-top: 70px; }
+  body { font-size: 17px; }
+  .wrap { width: min(100% - 32px, 520px); }
+  .nav-inner { min-height: 62px; }
+  .menu-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 10px 16px 16px; background: white; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); flex-direction: column; align-items: stretch; gap: 0; }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: 12px 8px; font-size: 16px; }
+  .hero { min-height: auto; padding: 56px 0 62px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 38px; }
+  .hero h1 { max-width: 16ch; font-size: clamp(2.25rem, 10vw, 3.3rem); }
+  .hero-copy { order: 1; }
+  .photo { order: 0; width: min(72%, 280px); }
+  .badge { font-size: 11px; padding: 6px 10px; }
+  .b1 { left: -10px; } .b2 { right: -10px; } .b3 { left: -8px; }
+  .stats { gap: 20px; margin-top: 30px; }
+  .stats strong { font-size: 1.65rem; }
+  section { padding: 56px 0; }
+  .head { margin-bottom: 24px; }
+  .card-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .card h3 { font-size: 1.25rem; }
+  .card-text { padding: 18px 18px 21px; }
+  .pics, .no-photo { aspect-ratio: 5 / 3; }
+}
+@media (max-width: 360px) {
+  .wrap { width: calc(100% - 26px); }
+  .btns { gap: 9px; }
+  .btn { padding: 10px 16px; font-size: 14px; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .badge { white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
