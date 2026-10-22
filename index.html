@@ -65,6 +65,7 @@ section.alt{background:var(--bg2)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
 .card .pics{display:grid;gap:3px;background:var(--line)}
+.card .pics.two{grid-template-columns:1fr 1fr}
 .card .pics.three{grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr}
 .card .pics.three img:first-child{grid-row:1 / span 2}
 .card .pics img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg2)}
@@ -147,29 +148,24 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px;border
     <div class="grid">
  
       <article class="card">
-        <div class="pics"><img src="images/truffles.jpg" alt="Chickpea truffles"></div>
         <div class="txt"><span class="tag">Thesis</span><h3>Chickpea Truffles</h3>
         <p>My thesis. I compared the nutrition profile of Desi and Kabuli chickpeas, then used both to make energy-dense chocolate truffles. I tested their taste, storage and color.</p></div>
       </article>
  
       <article class="card">
-        <div class="pics"><img src="images/dazest-bites.jpg" alt="Dazest Bites snack"></div>
+        <div class="pics"><img src="image/dazest-bites.jpeg" alt="Dazest Bites snack"></div>
         <div class="txt"><span class="tag">3rd place</span><h3>Dazest Bites</h3>
         <p>A snack made with dates and mixed seeds. It won 3rd place in my university’s Food Innovation Competition.</p></div>
       </article>
  
       <article class="card">
-        <div class="pics"><img src="images/lozenges.jpg" alt="Eucalyptus, honey and lime lozenges"></div>
+        <div class="pics"><img src="image/lozenges.jpeg" alt="Eucalyptus, honey and lime lozenges"></div>
         <div class="txt"><span class="tag">Confectionery</span><h3>Lozenges</h3>
         <p>Eucalyptus, honey and lime lozenges, made in my confectionery course.</p></div>
       </article>
  
       <article class="card">
-        <div class="pics three">
-          <img src="images/safebite-1.jpg" alt="SafeBite photo 1">
-          <img src="images/safebite-2.jpg" alt="SafeBite photo 2">
-          <img src="images/safebite-3.jpg" alt="SafeBite photo 3">
-        </div>
+        <div class="pics"><img src="image/safebite-1.jpeg" alt="SafeBite project with a street food vendor"></div>
         <div class="txt"><span class="tag">Community project</span><h3>SafeBite</h3>
         <p>A hygiene project I started for street food vendors in Lahore. With my Head of Department, I trained volunteers, and we gave protective equipment and hygiene guidance to 30 vendors. It was supported by a U.S. Department of State and IREX Community Development Initiative Award.</p></div>
       </article>
@@ -184,25 +180,25 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px;border
     <div class="grid">
  
       <article class="card">
-        <div class="pics"><img src="images/ugrad-class.jpg" alt="Global UGRAD at Kansas State University"></div>
+        <div class="pics"><img src="image/ugrad-class.jpeg" alt="Global UGRAD at Kansas State University"></div>
         <div class="txt"><span class="tag">Exchange</span><h3>Global UGRAD at Kansas State University</h3>
         <p>A semester abroad where I studied Science of Food and Food and Health.</p></div>
       </article>
  
       <article class="card">
-        <div class="pics"><img src="images/konza.jpg" alt="Volunteering at Konza Student Table"></div>
+        <div class="pics"><img src="image/konza.jpeg" alt="Volunteering at Konza Student Table"></div>
         <div class="txt"><span class="tag">Volunteering</span><h3>Konza Student Table</h3>
         <p>Every week I worked there to pack and distribute meals for K-State students and their families.</p></div>
       </article>
  
       <article class="card">
-        <div class="pics"><img src="images/borlaug-table.jpg" alt="At the Feed the Future Innovation Lab table"></div>
+        <div class="pics"><img src="image/borlaug-table.jpeg" alt="At the Feed the Future Innovation Lab table"></div>
         <div class="txt"><span class="tag">Conference</span><h3>Borlaug International Dialogue, Iowa</h3>
         <p>I was selected to represent Kansas State University at its Feed the Future Innovation Lab table.</p></div>
       </article>
  
       <article class="card">
-        <div class="pics"><img src="images/factory.jpg" alt="Food factory"></div>
+        <div class="pics two"><img src="image/factory-1.jpeg" alt="Food safety laboratory work"><img src="image/factory-2.jpeg" alt="Food processing work in a factory"></div>
         <div class="txt"><span class="tag">Work experience</span><h3>Jalal Sons</h3>
         <p>I worked as a Food Safety Officer in a food factory, testing moisture, Brix, gluten, and so on at different stages of production.</p></div>
       </article>
@@ -251,7 +247,7 @@ document.querySelectorAll(".pics img,#profile").forEach(function(img){
   var triedAlt=false;
   function fail(){
     /* the profile photo may sit in the main folder or in images/ */
-    if(img.id==="profile"&&!triedAlt){triedAlt=true;img.src="images/profile.jpg";return;}
+    if(img.id==="profile"&&!triedAlt){triedAlt=true;img.src="profile.jpg";return;}
     dropImg(img);
   }
   img.addEventListener("error",fail);
