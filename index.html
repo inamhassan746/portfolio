@@ -120,7 +120,7 @@ footer{padding:26px 0;text-align:center;color:var(--muted);font-size:14px;border
       </div>
     </div>
     <div class="photo">
-      <img id="profile" src="images/profile.jpg" alt="Portrait of Inam Ul Hassan">
+      <img id="profile" src="profile.jpg" alt="Portrait of Inam Ul Hassan">
       <span class="badge b1">Gold Medalist</span>
       <span class="badge b2">UGRAD Scholar</span>
       <span class="badge b3">4.00 CGPA</span>
@@ -248,8 +248,14 @@ function dropImg(img){
   if(img.id==="profile"){box.querySelectorAll(".badge").forEach(function(b){b.remove();});box.remove();}
 }
 document.querySelectorAll(".pics img,#profile").forEach(function(img){
-  img.addEventListener("error",function(){dropImg(img);});
-  if(img.complete&&img.naturalWidth===0){dropImg(img);}
+  var triedAlt=false;
+  function fail(){
+    /* the profile photo may sit in the main folder or in images/ */
+    if(img.id==="profile"&&!triedAlt){triedAlt=true;img.src="images/profile.jpg";return;}
+    dropImg(img);
+  }
+  img.addEventListener("error",fail);
+  if(img.complete&&img.naturalWidth===0){fail();}
 });
 </script>
 </body>
